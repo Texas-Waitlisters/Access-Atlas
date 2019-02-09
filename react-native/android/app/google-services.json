@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "229076563846",
+    "firebase_url": "https://hacklahoma-56983.firebaseio.com",
+    "project_id": "hacklahoma-56983",
+    "storage_bucket": "hacklahoma-56983.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229076563846:android:9a68adf2b3b6b065",
+        "android_client_info": {
+          "package_name": "com.waitlisters.hacklahoma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229076563846-adrrtgsebei060avcdfd6pri1qvi7csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9QMbT_rsbaT41dEioJcAgtSmGsAI4f_c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
