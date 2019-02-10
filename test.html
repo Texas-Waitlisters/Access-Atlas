@@ -43,24 +43,28 @@
             'UT-buildings.png',
             imageBounds);
         historicalOverlay.setMap(map);
+
+        function ajaxMap(){
+        initMap();
+
+        if( $('#map').find('div').length ){
+
+          StopTimer();
+        }
       }
+
       var src = 'https://www.cs.utexas.edu/~rsmoreno/Accessible.xml';
+      // var src = 'data/Accessible_Doors.kml';
+      // var src = 'data/accessible.kml'
       var kmlLayer = new google.maps.KmlLayer(src, {
         suppressInfoWindows: true,
         preserveViewport: false,
         map: map
       });
+    }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0w2RQ47__MGHIBzUHM9-K69tQonoR7_s&callback=initMap">
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB0w2RQ47__MGHIBzUHM9-K69tQonoR7_s&callback=initMap">
     </script>
-    <!-- <script>
-      var src = 'https://www.cs.utexas.edu/~rsmoreno/Accessible.xml';
-      var kmlLayer = new google.maps.KmlLayer(src, {
-        suppressInfoWindows: true,
-        preserveViewport: false,
-        map: map
-      });
-  </script> -->
   </body>
 </html>
