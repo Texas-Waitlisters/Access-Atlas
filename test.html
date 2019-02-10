@@ -44,9 +44,23 @@
             imageBounds);
         historicalOverlay.setMap(map);
       }
+      var src = 'https://www.cs.utexas.edu/~rsmoreno/Accessible.xml';
+      var kmlLayer = new google.maps.KmlLayer(src, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+      });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0w2RQ47__MGHIBzUHM9-K69tQonoR7_s&callback=initMap">
     </script>
+    <!-- <script>
+      var src = 'https://www.cs.utexas.edu/~rsmoreno/Accessible.xml';
+      var kmlLayer = new google.maps.KmlLayer(src, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+      });
+  </script> -->
   </body>
 </html>
