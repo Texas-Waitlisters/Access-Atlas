@@ -3,42 +3,37 @@
 import React from 'react'
 import { StyleSheet, Platform, Image, Text, View, TouchableOpacity } from 'react-native'
 import firebase from 'react-native-firebase'
+import {createBottomTabNavigator} from 'react-navigation'
+import Icon from 'react-native-vector-icons/Ionicons';
+import Map from './Map'
+import Profile from './Profile'
 
-export default class Main extends React.Component {
-  state = { currentUser: null }
+const Nav = createBottomTabNavigator(
+	{
+		Map: {screen: Map},
+		Profile: {screen: Profile}
+	},
+	{
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, tintColor }) => {
+        const { routeName } = navigation.state;
+        let iconName;
+        if (routeName === 'Map') {
+          iconName = 'md-map';
+        }
+		else if(routeName === 'Profile') {
+		  iconName = 'md-person'
+		}
 
-render() {
-    const { currentUser } = this.state
+        // You can return any component that you like here! We usually use an
+        // icon component from react-native-vector-icons
+        return <Icon name={iconName} size={25} color={tintColor} />;
+      },
+    }),
+    tabBarOptions: {
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
+    },
+});
 
-return (
-      <View style={styles.container}>
-        <Text>
-          Hi {currentUser && currentUser.email}!
-        </Text>
-		<TouchableOpacity style={styles.logout} onPress={ () => {firebase.auth().signOut(); this.props.navigation.navigate("SignUp") }}>
-		  <Text>Logout</Text>
-		</TouchableOpacity>
-      </View>
-    )
-  }
-
-componentDidMount() {
-  const { currentUser } = firebase.auth();
-  this.setState({ currentUser })
-}
-}
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  logout: {
-	justifyContent: 'center',
-	alignItems: 'center',
-	padding: 10
-  }
-})
+export default Nav;
