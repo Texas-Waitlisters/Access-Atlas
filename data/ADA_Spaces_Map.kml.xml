@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>ADA Spaces Map</name>
+    <description/>
+    <NetworkLink>
+      <name>ADA Spaces Map</name>
+      <Link>
+        <href><![CDATA[http://www.google.com/maps/d/u/0/kml?forcekml=1&mid=1_lz3MCbMszH4vIeZ3f_71awtog8]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>
