@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <title>Make a Contribution to Access Atlas | Access Atlas</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+      <div class="container">
+         <h4>Make a Contribution to Access Atlas</h4>
+         <header class="major">
+            <p>Whether it's an architectural, disability-specific, no-tech, or high-tech acommodation, we want to know about it!</p>
+         </header>
+         <div class="image main"><img src="images/keeb.jpeg" height="288" width="420" alt="" /></div>
+         <div id="map">
+         </div>
+         <p id="current_position"></p>
+         <button id="showMe" class="btn center-align">
+         <i class="material-icons">
+         my_location
+         </i>
+         Use My Location
+         </button>
+
+         <form id="billingAddress">
+            <div id="locationList"></div>
+            <br>
+            <div>
+               <label>Contributor's Name</label>
+               <input type="text" name="name" id="name" value="Anonymous Contributor" maxlength="4">
+            </div>
+            <div class="input-field">
+               <textarea class="materialize-textarea" id="address" type="text"></textarea>
+               <label class="active" for="address">Address (Area and Street)</label>
+            </div>
+            <div class="input-field">
+               <input id="locality" type="text">
+               <label class="active" for="locality">City</label>
+            </div>
+            <div class="input-field">
+               <input id="city" type="text">
+               <label class="active" for="city">City/District/Town</label>
+            </div>
+            <div class="input-field">
+               <input id="postal_code" type="text">
+               <label class="active" for="pin_code">ZIP Code</label>
+            </div>
+            <div class="input-field">
+               <input id="state" type="text">
+               <label class="active" for="State">State</label>
+            </div>
+            <div>
+               <input type="text" name="description" id="description" placeholder="Description (e.g. accessible door handle, screen readers)" maxlength="4">
+            </div>
+            <div>
+               <button type="submit" id="submit-form" class="btn center-align">Submit</button>
+            </div>
+         </form>
+      </div>
+      <br>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js'></script>
+      <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGCql0HlN4C_D7B2BcIIhtuFvjrdfvoew'></script>
+      <script  src="assets/js/index.js"></script>
+   </body>
+</html>
