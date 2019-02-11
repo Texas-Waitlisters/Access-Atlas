@@ -32,27 +32,27 @@
                <input type="text" name="name" id="name" value="Anonymous Contributor" maxlength="4">
             </div>
             <div class="input-field">
-               <textarea class="materialize-textarea" id="address" type="text"></textarea>
+               <textarea class="materialize-textarea" name="address" id="address" type="text"></textarea>
                <label class="active" for="address">Address (Area and Street)</label>
             </div>
             <div class="input-field">
                <input id="locality" type="text">
-               <label class="active" for="locality">City</label>
+               <label class="active" name="city" for="locality">City</label>
             </div>
             <div class="input-field">
-               <input id="city" type="text">
-               <label class="active" for="city">City/District/Town</label>
+               <input id="city" type="text" name="county">
+               <label class="active" for="city">County/District/Town</label>
             </div>
             <div class="input-field">
-               <input id="postal_code" type="text">
+               <input id="postal_code" type="text" name="zip">
                <label class="active" for="pin_code">ZIP Code</label>
             </div>
             <div class="input-field">
-               <input id="state" type="text">
+               <input id="state" type="text" name="state">
                <label class="active" for="State">State</label>
             </div>
             <div>
-               <input type="text" name="description" id="description" placeholder="Description (e.g. accessible door handle, screen readers)" maxlength="4">
+               <input type="text" name="description" id="description" name="description" placeholder="Description (e.g. accessible door handle, screen readers)" maxlength="4">
             </div>
             <div>
                <button type="submit" id="submit-form" class="btn center-align">Submit</button>
